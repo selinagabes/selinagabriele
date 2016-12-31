@@ -10,8 +10,13 @@ namespace selinagabriele.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title="Selina Gabriele";
-return View();
+            ViewBag.Title = "Selina Gabriele";
+            return View();
+        }
+        public ActionResult About()
+        {
+            
+            return View();
         }
     }
 }

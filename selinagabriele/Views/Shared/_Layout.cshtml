@@ -33,8 +33,9 @@
                         <h3 class="masthead-brand">@ViewBag.Title</h3>
                         <ul class="nav masthead-nav">
                             <li class="active"><a href="#">Home</a></li>
-                            @*<li><a href="#">Features</a></li>
-                            <li><a href="#">Contact</a></li>*@
+                            <li><a href="@Url.Action("About","Home")">About</a></li>
+                            <li><a href="@Url.Content("../Content/files/gabriele_resume(2017).pdf")">Resume</a></li>
+                           @* <li><a href="#">Contact</a></li>*@
                         </ul>
                     </div>
                 </div>
