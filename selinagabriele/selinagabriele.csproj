@@ -178,6 +178,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -187,11 +188,19 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\1475262462255.jpg" />
+    <Content Include="Content\images\ab.jpg" />
+    <Content Include="Content\images\about.jpg" />
+    <Content Include="Content\images\abt.jpg" />
+    <Content Include="Content\images\ilikewater.jpg" />
+    <Content Include="Content\images\selina_2016-2.jpg" />
+    <Content Include="Content\images\selina_2016.jpg" />
+    <Content Include="css\about.css" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\cover.css" />
+    <Content Include="css\home.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -250,8 +259,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\files\gabriele_resume%282017%29.pdf" />
+    <Content Include="Content\font\Great_Day.ttf" />
     <None Include="Properties\PublishProfiles\selinagabes.pubxml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\_ContactPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

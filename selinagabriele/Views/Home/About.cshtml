@@ -1,7 +1,69 @@
 ﻿
-@{
-    ViewBag.Title = "About";
-}
 
-<h2>About</h2>
 
+<div class="container-fluid aboutainer">
+    <div class="col-md-12">
+
+        <div class="well row">
+            <h2 class="GreatFont">About</h2>
+            <div class="col-md-6">
+                <h4 class="text-primary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu convallis erat,
+                    at vulputate nisi. Ut pellentesque ipsum eu tellus vulputate posuere.
+                    Nulla molestie tincidunt feugiat. Aenean quis consequat lorem, nec sollicitudin nisl.
+                </h4>
+                <h4 class="text-primary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu convallis erat,
+                    at vulputate nisi. Ut pellentesque ipsum eu tellus vulputate posuere.
+                    Nulla molestie tincidunt feugiat. Aenean quis consequat lorem, nec sollicitudin nisl.
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/images/selina_2016-2.jpg" alt="Selina 2016" />
+            </div>
+
+
+            <div class="col-md-12">
+                <h2 class="GreatFont">Interests</h2>
+                <h4 class="text-primary">
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Aenean nunc nisl, hendrerit ac dolor nec, lacinia accumsan magna.
+                    Proin ultricies nibh vitae orci faucibus hendrerit. Morbi venenatis leo vitae lectus suscipit eleifend.
+                </h4>
+            </div>
+            <div class="col-md-12">
+                <h2 class="GreatFont">Contact</h2>
+
+                <h4 class="text-primary"> Phasellus in nulla sapien.</h4>
+                <p class="lead">
+                    <a href="https://ca.linkedin.com/in/selina-gabriele-724513b9" class="btn btn-lg btn-default"><i class="fa fa-linkedin-square fa-lg fa-inverse" aria-hidden="true"></i></a>
+                    <a href="https://github.com/selinagabes" class="btn btn-lg btn-default"><i class="fa fa-github  fa-lg fa-inverse" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/selinagabes/" class="btn btn-lg btn-default"><i class="fa fa-instagram  fa-lg fa-inverse" aria-hidden="true"></i></a>
+                    <button type="button" class="btn btn-lg btn-default get-modal"><i class="fa fa-envelope  fa-lg fa-inverse"></i></button>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal fade in" id="displayModal">
+        <div id="contact-modal-container"></div>
+    </div>
+    @section styles{
+        <link href="@Url.Content("~/css/about.css")" rel="stylesheet">
+    }
+    @section scripts{
+        <script type="text/javascript">
+            $(function () {
+
+
+                $('.get-modal').click(function () {
+                    var url = '/Home/Contact';
+                    $.get(url, function (data) {
+                        $('#contact-modal-container').html(data);
+                        $('#displayModal').modal('show');
+                    })
+
+                });
+            });
+        </script>
+    }
