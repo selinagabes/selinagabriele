@@ -8,9 +8,10 @@
     <meta name="author" content="">
     <title>@ViewBag.Title</title>
     <!-- Bootstrap core CSS -->
+    <link href="@Url.Content("~/css/global.css")" rel="stylesheet">
     <link href="@Url.Content("~/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("~/css/cover.css")" rel="stylesheet">
-
+    @RenderSection("styles", false)
     <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,11 +31,12 @@
 
                 <div class="masthead clearfix">
                     <div class="inner">
-                        <h3 class="masthead-brand">@ViewBag.Title</h3>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            @*<li><a href="#">Features</a></li>
-                            <li><a href="#">Contact</a></li>*@
+                        <a href="@Url.Action("Index","Home")" class="display-4 masthead-brand"style="text-decoration:none;">@ViewBag.Title</a>
+                        <ul class="nav masthead-nav" id="nav">
+                            <li  class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
+                            <li><a href="@Url.Action("About","Home")">About</a></li>
+                            <li><a href="@Url.Content("../Content/files/gabriele_resume(2017).pdf")">Resume</a></li>
+                            @* <li><a href="#">Contact</a></li>*@
                         </ul>
                     </div>
                 </div>
@@ -49,5 +51,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="@Url.Content("~/js/bootstrap.js")"></script>
+    <script src="@Url.Content("~/js/global.js")">
+      
+    </script>
+    @RenderSection("scripts", false)
 </body>
 </html>
